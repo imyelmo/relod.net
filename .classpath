@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="">
-		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value=“relod.net/reload/dev2dev/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="reload/dev2dev/lib/concurrent.jar"/>
 	<classpathentry kind="lib" path="reload/dev2dev/lib/jain-sdp-1.0.2337.jar"/>
 	<classpathentry kind="lib" path="reload/dev2dev/lib/jain-sdp-src-1.0.2337.jar"/>
@@ -16,5 +12,5 @@
 	<classpathentry kind="lib" path="reload/dev2dev/lib/jain-sip-src-1.2.2337.jar"/>
 	<classpathentry kind="lib" path="reload/dev2dev/lib/jain-sip-tck-1.2.2337.jar"/>
 	<classpathentry kind="lib" path="reload/dev2dev/lib/log4j-1.2.17.jar"/>
-	<classpathentry kind="output" path="trunk/classes"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>
