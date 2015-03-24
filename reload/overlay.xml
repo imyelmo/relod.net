@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<overlay xmlns="urn:ietf:params:xml:ns:p2p:config-base" xmlns:chord="urn:ietf:params:xml:ns:p2p:config-chord" xmlns:ext="urn:ietf:params:xml:ns:p2p:config-ext1">
+    <configuration expiration="2002-10-10T07:00:00Z" ext:ext-example="stuff" instance-name="overlay.example.org" sequence="22">
+        <topology-plugin> CHORD-RELOAD </topology-plugin>
+        <node-id-length>16</node-id-length>
+        <root-cert>MIIDJDCCAo2gAwIBAgIBADANBgkqhkiG9w0BAQUFADBwMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTERMA8GA1UEBxMIU2FuIEpvc2UxDjAMBgNVBAoTBXNpcGl0MSkwJwYDVQQLEyBTaXBpdCBUZXN0IENlcnRpZmljYXRlIEF1dGhvcml0eTAeFw0wMzA3MTgxMjIxNTJaFw0xMzA3MTUxMjIxNTJaMHAxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMREwDwYDVQQHEwhTYW4gSm9zZTEOMAwGA1UEChMFc2lwaXQxKTAnBgNVBAsTIFNpcGl0IFRlc3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDIh6DkcUDLDyK9BEUxkud+nJ4xrCVGKfgjHm6XaSuHiEtnfELHM+9WymzkBNzZpJu30yzsxwfKoIKugdNUrD4N3viCicwcN35LgP/KnbN34cavXHr4ZlqxH+OdKB3hQTpQa38A7YXdaoz6goW2ft5Mi74z03GNKP/G9BoKOGd5QIDAQABo4HNMIHKMB0GA1UdDgQWBBRrRhcU6pR2JYBUbhNU2qHjVBShtjCBmgYDVR0jBIGSMIGPgBRrRhcU6pR2JYBUbhNU2qHjVBShtqF0pHIwcDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcTCFNhbiBKb3NlMQ4wDAYDVQQKEwVzaXBpdDEpMCcGA1UECxMgU2lwaXQgVGVzdCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHmCAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCWbRvv1ZGTRXxbH8/EqkdSCzSoUPrs+rQqR0xdQac9wNY/nlZbkR3OqAezG6Sfmklvf+DOg5RxQq/+Y6I03LRepc7KeVDpaplMFGnpfKsibETMipwzayNQQgUf4cKBiF+65Ue7hZuDJa2EMv8qW4twEhGDYclpFU9YozyS1OhvUg==</root-cert>
+        <root-cert>YmFkIGNlcnQK</root-cert>
+        <enrollment-server>https://example.org</enrollment-server>
+        <enrollment-server>https://example.net</enrollment-server>
+        <self-signed-permitted digest="sha1">false</self-signed-permitted>
+		<bootstrap-node address="80.30.133.88" port="9999"/>
+		<bootstrap-node address="192.168.1.70" port="9999"/>
+        <turn-density> 20 </turn-density>
+        <multicast-bootstrap address="192.0.0.1"/>
+        <multicast-bootstrap address="233.252.0.1" port="6084"/>
+        <clients-permitted> false </clients-permitted>
+        <no-ice> false </no-ice>
+        <chord:chord-update-interval>400</chord:chord-update-interval>
+        <chord:chord-ping-interval>30</chord:chord-ping-interval>
+        <chord:chord-reactive> true </chord:chord-reactive>
+        <shared-secret> password </shared-secret>
+        <max-message-size>4000</max-message-size>
+        <initial-ttl> 30 </initial-ttl>
+        <overlay-reliability-timer> 3000 </overlay-reliability-timer>
+        <overlay-link-protocol>TCP</overlay-link-protocol>
+        <configuration-signer>47112162e84c69ba</configuration-signer>
+        <kind-signer> 47112162e84c69ba </kind-signer>
+        <kind-signer> 6eba45d31a900c06 </kind-signer>
+        <bad-node> 6ebc45d31a900c06 </bad-node>
+        <bad-node> 6ebc45d31a900ca6 </bad-node>
+        <ext:example-extension> foo </ext:example-extension>
+        <mandatory-extension>urn:ietf:params:xml:ns:p2p:config-ext1</mandatory-extension>
+        <required-kinds>
+            <kind-block/>
+            <kind-block>
+                <kind name="SIP-REGISTRATION">
+                    <data-model>SINGLE</data-model>
+                    <access-control>USER-MATCH</access-control>
+                    <max-count>1</max-count>
+                    <max-size>100</max-size>
+                    <data-model>ARRAY</data-model>
+                    <access-control>NODE-MULTIPLE</access-control>
+                    <max-node-multiple>3</max-node-multiple>
+                    <max-count>22</max-count>
+                    <max-size>4</max-size>
+                    <ext:example-kind-extension> 1 </ext:example-kind-extension>
+                </kind>
+                <kind-signature>VGhpcyBpcyBub3QgcmlnaHQhCg==</kind-signature>
+            </kind-block>
+        </required-kinds>
+    </configuration>
+    <signature> VGhpcyBpcyBub3QgcmlnaHQhCg== </signature>
+    <configuration instance-name="other.example.net"/>
+    <signature> VGhpcyBpcyBub3QgcmlnaHQhCg== </signature>
+</overlay>
